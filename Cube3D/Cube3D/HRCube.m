@@ -65,7 +65,7 @@
     [self addCubeLayer:@[@0, @(_side/2), @0, @(M_PI_2), @1, @0, @0]];
     
     CATransform3D transform3D = CATransform3DIdentity;
-    transform3D.m34 = -1.0/700;
+    transform3D.m34 = -1.0/2000;
     _cubeLayer.sublayerTransform = transform3D;
     
     [self.layer addSublayer:_cubeLayer];
@@ -117,7 +117,7 @@
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"sublayerTransform.rotation.y"];
     animation.toValue = @(MAXFLOAT);
-    animation.duration = MAXFLOAT;
+    animation.duration = INFINITY;
     [_cubeLayer addAnimation:animation forKey:@"rotation"];
 }
 
