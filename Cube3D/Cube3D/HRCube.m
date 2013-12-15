@@ -117,7 +117,7 @@
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"sublayerTransform.rotation.y"];
     animation.toValue = @(MAXFLOAT);
-    animation.duration = INFINITY;
+    animation.duration = MAXFLOAT;
     [_cubeLayer addAnimation:animation forKey:@"rotation"];
 }
 
